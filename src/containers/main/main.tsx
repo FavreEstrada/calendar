@@ -6,9 +6,10 @@ class Main extends React.Component<any, any> {
       initialDate: "",
       days: null,
       country: "",
-      shouldRender: false
+      shouldRender: false,
     };
   }
+  private this.counter = 0;
   handleChange = (event: any) => {
     this.setState({ [event.target.name]: event.target.value });
   }
@@ -20,6 +21,7 @@ class Main extends React.Component<any, any> {
   }
   renderCalendar = () => {
     let { initialDate, days } = this.state;
+    this.counter = 0;
     initialDate = initialDate.replace(/-/g, '/');
     const weekdays = ["S", "M", "T", "W", "T", "F", "S"];
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -65,11 +67,15 @@ class Main extends React.Component<any, any> {
   renderWeekdays(week: number, daysArray: any) {
     return daysArray.slice(week * 7, (week * 7) + 7).map((day: number, i: number) => {
       let val = day ? day : "";
-      let class_ = "valid";
+      let class_ = "empty";
+      if (val && this.counter < Number(this.state.days)) {
+        class_ = "valid";
+      }
       if (i === 0 || i === 6) {
         class_ = "weekend";
-      } else if (!val) {
-        class_ = "empty";
+      }
+      if (val) {
+        this.counter++;
       }
       return <td className={class_} key={"day-" + ((week + 1) * day + i)}>{val}</td>
     })
