@@ -1,1 +1,9 @@
+.main-wrapper .calendar-wrapper .week-row .valid {
+  background: #9bd29b; }
+
+.main-wrapper .calendar-wrapper .week-row .empty {
+  background: #adacac; }
+
+.main-wrapper .calendar-wrapper .week-row .weekend {
+  background: #ecec8b; }
 

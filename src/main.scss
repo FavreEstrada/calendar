@@ -1,0 +1,18 @@
+.main-wrapper{
+	.calendar-wrapper{
+		.title{
+
+		}
+		.week-row{
+			.valid{
+				background: #9bd29b;
+			}
+			.empty{
+				background: #adacac;
+			}
+			.weekend{
+				background: #ecec8b;
+			}
+		}
+	}
+}
