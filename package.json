@@ -1,0 +1,35 @@
+{
+  "name": "calendar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --w -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "calendar"
+  },
+  "author": "Favre Estrada",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^16.4.14",
+    "autoprefixer": "^9.1.5",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.9.3",
+    "postcss-loader": "^3.0.0",
+    "precss": "^3.1.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "ts-loader": "^5.2.1",
+    "typescript": "^3.1.1",
+    "webpack": "^4.20.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.2"
+  }
+}
